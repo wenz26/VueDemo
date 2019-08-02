@@ -1,0 +1,42 @@
+<!--根组件-->
+<template> <!--模板，写html代码-->
+  <div> <!--模板必须要有一个根标签，比如div-->
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="page-header"><h2>Router Test</h2></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-2">
+        <div class="list-group">
+
+          <!--生成路由链接-->
+          <router-link to="/about" class="list-group-item">About</router-link>
+          <router-link to="/home" class="list-group-item">Home</router-link>
+
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="panel">
+          <div class="panel-body">
+
+            <!--显示当前组件-->
+            <keep-alive><!--<keep-alive>缓存路由组件-->
+              <router-view msg="大佬牛逼！！！"></router-view>
+            </keep-alive>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+    export default {}
+</script>
+
+<style scoped>
+
+</style>
